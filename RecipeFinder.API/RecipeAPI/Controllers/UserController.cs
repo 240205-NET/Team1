@@ -40,7 +40,7 @@ namespace Recipe.API.Controllers
 
         //POST
         [HttpPost]
-        [Route("signup")]
+        [Route("signUp")]
         public async Task<ActionResult> AddUser([FromBody]User newUser)
         {
             try
@@ -55,6 +55,35 @@ namespace Recipe.API.Controllers
             Console.WriteLine($"User {newUser.Username} has been added !");
             return StatusCode(200);
         }
+
+        //POST
+        [HttpPost]
+        [Route("signIn")]
+        public async Task<ActionResult> AuthUser([FromBody] User newUser)
+        {
+            try
+            {
+                // Await the asynchronous operation to get the user
+                User authenticatedUser = await _repo.GetByCredentials(newUser.Username, newUser.Password);
+
+                if (authenticatedUser == null)
+                {
+                    Console.WriteLine($"User {newUser.Username} has not been found !");
+                    return StatusCode(404);
+                }
+                else
+                {
+                    Console.WriteLine($"User {newUser.Username} has been found !");
+                    return StatusCode(200);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger?.LogError(ex, ex.Message);
+                return StatusCode(500);
+            }
+        }
+
 
     }
 }

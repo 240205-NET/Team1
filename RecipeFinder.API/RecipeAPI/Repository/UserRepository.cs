@@ -99,5 +99,37 @@ namespace RecipeAPI.Repository
             command.Parameters.AddWithValue("@ID", id);
             await command.ExecuteNonQueryAsync();
         }
+
+        public async Task<User?> GetByCredentials(string username, string password)
+        {
+            string query = @"SELECT * FROM [RecipeFinder].[User] WHERE Username = @UserName AND Password = @PassWord";
+
+            using SqlConnection connection = new(this._connectionString);
+            await connection.OpenAsync();
+            SqlCommand command = new(query, connection);
+            command.Parameters.AddWithValue("@UserName", username);
+            command.Parameters.AddWithValue("@PassWord", password);
+
+            using SqlDataReader reader = await command.ExecuteReaderAsync();
+
+            if(await reader.ReadAsync())
+            {
+                return new User
+                {
+                    ID = reader.GetInt32(reader.GetOrdinal("ID")),
+                    Username = reader.GetString(reader.GetOrdinal("Username")),
+                    Password = reader.GetString(reader.GetOrdinal("Password")),
+                    First_name = reader.GetString(reader.GetOrdinal("First_name")),
+                    Last_name = reader.GetString(reader.GetOrdinal("Last_name")),
+                    Email = reader.GetString(reader.GetOrdinal("Email"))
+                };
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
     }
 }
