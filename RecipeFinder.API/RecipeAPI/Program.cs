@@ -4,11 +4,13 @@ using RecipeAPI.Repository;
 var builder = WebApplication.CreateBuilder(args);
 
 
-string connectionString = "Server=tcp:nimaserver.database.windows.net,1433;Initial Catalog=Revature;Persist Security Info=False;User ID=NDJAVID;Password=Nimaji909$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-;
-//await File.ReadAllTextAsync("../.connectionString") ?? throw new ArgumentNullException(nameof(connectionString));
-
 // Add services to the container.
+
+IConfiguration configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+string connectionString = configuration.GetConnectionString("MyDatabase");
 
 builder.Services.AddControllers();
 

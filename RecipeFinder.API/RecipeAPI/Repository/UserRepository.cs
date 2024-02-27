@@ -79,6 +79,7 @@ namespace RecipeAPI.Repository
             string query = @"INSERT INTO [RecipeFinder].[User] (Username, Password, First_name, Last_name, Email) VALUES (@Username, @Password, @First_name, @Last_name, @Email)";
 
             using SqlConnection connection = new(this._connectionString);
+            await connection.OpenAsync();
             SqlCommand command = new(query, connection);
             command.Parameters.AddWithValue("@Username", user.Username);
             command.Parameters.AddWithValue("@Password", user.Password);

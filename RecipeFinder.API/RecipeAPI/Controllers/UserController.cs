@@ -38,5 +38,23 @@ namespace Recipe.API.Controllers
             }
         }
 
+        //POST
+        [HttpPost]
+        [Route("signup")]
+        public async Task<ActionResult> AddUser([FromBody]User newUser)
+        {
+            try
+            {
+                await _repo.Add(newUser);
+            }
+            catch (Exception ex) 
+            {
+                _logger?.LogError(ex, ex.Message);
+                return StatusCode(500);
+            }
+            Console.WriteLine($"User {newUser.Username} has been added !");
+            return StatusCode(200);
+        }
+
     }
 }
