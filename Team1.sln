@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeAPI", "RecipeFinder.API\RecipeAPI\RecipeAPI.csproj", "{A51C3643-9493-4B1C-B83A-735EAF7062A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeFinder.DTO", "RecipeFinder.DTO\RecipeFinder.DTO.csproj", "{9B569AC5-896F-4254-9289-7590379D2D50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeFinder.Logic", "RecipeFinder.Logic\RecipeFinder.Logic.csproj", "{4068A0ED-5005-4A3A-88E1-ADCDE76C1B17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeFinder.ConsoleApp", "RecipeFinder.App\RecipeFinder.ConsoleApp.csproj", "{19A4768F-767B-4A36-A37F-CAACD74449FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A51C3643-9493-4B1C-B83A-735EAF7062A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51C3643-9493-4B1C-B83A-735EAF7062A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51C3643-9493-4B1C-B83A-735EAF7062A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51C3643-9493-4B1C-B83A-735EAF7062A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B569AC5-896F-4254-9289-7590379D2D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B569AC5-896F-4254-9289-7590379D2D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B569AC5-896F-4254-9289-7590379D2D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B569AC5-896F-4254-9289-7590379D2D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4068A0ED-5005-4A3A-88E1-ADCDE76C1B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4068A0ED-5005-4A3A-88E1-ADCDE76C1B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4068A0ED-5005-4A3A-88E1-ADCDE76C1B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4068A0ED-5005-4A3A-88E1-ADCDE76C1B17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A4768F-767B-4A36-A37F-CAACD74449FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A4768F-767B-4A36-A37F-CAACD74449FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A4768F-767B-4A36-A37F-CAACD74449FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A4768F-767B-4A36-A37F-CAACD74449FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6B2EE66-DBAD-4B85-B9A5-40483232C6E1}
+	EndGlobalSection
+EndGlobal

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using RecipeFinder.Model;
+using RecipeFinder.Logic.Model;
 
-namespace RecipeFinder.APP
+namespace RecipeFinder.Logic
 {
     class Program
     {

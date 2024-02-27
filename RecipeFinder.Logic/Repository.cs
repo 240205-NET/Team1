@@ -1,6 +1,6 @@
 using System;
 using System.Text;
-using RecipeFinder.Model;
+using RecipeFinder.Logic.Model;
 
 public class Repository
 {

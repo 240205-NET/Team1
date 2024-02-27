@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RecipeFinder.Model;
+namespace RecipeFinder.Logic.Model;
 
-public partial class Meal
+public class Meal
 {
     public int Id { get; set; }
 
