@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "cUZDMwbSQG+rkbprGXxiREeAhURY8BTwvMj7AL9bNXzi69rrKwSShGUM7Xb91uWIKc+FZ2gkvcgdjjyT55kQng==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files\\Scripts\\Revature\\Team1\\RecipeFinder.App\\RecipeFinder.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Agama\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Agama\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Agama\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Agama\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.16\\microsoft.netcore.app.host.win-x64.7.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

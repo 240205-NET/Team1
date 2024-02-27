@@ -1,5 +1,4 @@
 using System;
-using System.Net.Http.Json;
 
 namespace RecipeFinder
 {
@@ -70,9 +69,9 @@ namespace RecipeFinder
             }
         }
 
-        static string url = "https://localhost:7297/"; //add api url
-        public static async void AddRecipe(){
-            string uri = url + "api/Meal/";
+        public static void AddRecipe()
+        {
+            string path = @".\TextFile.txt";
 
             string id = "0";
             Console.Write("Recipe Name: ");
@@ -97,17 +96,7 @@ namespace RecipeFinder
             meal.strIngredient2 = ingr2;
             meal.strIngredient3 = ingr3;
 
-            HttpClient client = new HttpClient();
-            try{
-                HttpResponseMessage response = await client.PostAsJsonAsync<Meal>(uri, meal);
-                if(!response.IsSuccessStatusCode){
-                    Console.WriteLine(response.StatusCode + "\n" + response.Content);
-                }
-            }catch (Exception e){
-                Console.WriteLine(e.Message);
-            }
-            
-            
+            WriteFile(meal, path);
         }
 
         public static void Serialize(Meal meal, string path)
