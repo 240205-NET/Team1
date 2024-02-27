@@ -9,6 +9,6 @@ public interface IRepository
   Task<User?> GetById(int id);
   Task AddUser(User user);
   Task DeleteUser(int id);
-
+  Task MakeMealPlan()
 }
 

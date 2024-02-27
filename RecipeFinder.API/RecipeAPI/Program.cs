@@ -1,7 +1,9 @@
 using Microsoft.Extensions.Configuration;
-using RecipeAPI.Model;
-using RecipeAPI.Repository;
+using RecipeFinder.DTO;
+using RecipeFinder.Logic.Model;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 
 
@@ -15,9 +17,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<UserRepository>(sp => new UserRepository(connectionString, sp.GetRequiredService<ILogger<UserRepository>>()));
+var config = new ConfigurationBuilder.
+    SetBasePath(builder.Environment.ContentRootPath).
+    AddJsonFile("appsettings.json").
+    Build();
 
-builder.Services.AddSingleton<MealRepository>(sp => new MealRepository(connectionString, sp.GetRequiredService<ILogger<MealRepository>>()));
+builder.Services.AddSingleton<MealAccess>(config);
+builder.Services.AddSingleton<MealPlanAccess>(config);
+builder.Services.AddSingleton<UserAccess>(config);
 
 var app = builder.Build();
 

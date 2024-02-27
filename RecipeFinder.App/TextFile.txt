@@ -1,4 +1,0 @@
-RecipeFinder.Meal
-0 | Meal1 | cat1 | area2 | ingr1 | ingre2 | ingre3
-0 | recipe2 | cat2 | area2 | ingr12 | ingr22 | ingre32
-0 | Recipe1 | Cat1 | Area1 | ingr1 | ingr2 | ingr3
