@@ -1,0 +1,29 @@
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\bin\Debug\net7.0\RecipeFinder.exe
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\bin\Debug\net7.0\RecipeFinder.deps.json
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\bin\Debug\net7.0\RecipeFinder.runtimeconfig.json
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\bin\Debug\net7.0\RecipeFinder.dll
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\bin\Debug\net7.0\RecipeFinder.pdb
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\RecipeFinder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\RecipeFinder.AssemblyInfoInputs.cache
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\RecipeFinder.AssemblyInfo.cs
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\RecipeFinder.csproj.CoreCompileInputs.cache
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\RecipeFinder.dll
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\refint\RecipeFinder.dll
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\RecipeFinder.pdb
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\RecipeFinder.genruntimeconfig.cache
+C:\Users\PRO\Documents\Revature\P1\RecipeFinder\RecipeFinder\obj\Debug\net7.0\ref\RecipeFinder.dll
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\bin\Debug\net7.0\RecipeFinder.exe
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\bin\Debug\net7.0\RecipeFinder.deps.json
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\bin\Debug\net7.0\RecipeFinder.runtimeconfig.json
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\bin\Debug\net7.0\RecipeFinder.dll
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\bin\Debug\net7.0\RecipeFinder.pdb
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\RecipeFinder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\RecipeFinder.AssemblyInfoInputs.cache
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\RecipeFinder.AssemblyInfo.cs
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\RecipeFinder.csproj.CoreCompileInputs.cache
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\RecipeFinder.sourcelink.json
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\RecipeFinder.dll
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\refint\RecipeFinder.dll
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\RecipeFinder.pdb
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\RecipeFinder.genruntimeconfig.cache
+C:\Program Files\Scripts\Revature\Team1\RecipeFinder.App\obj\Debug\net7.0\ref\RecipeFinder.dll
