@@ -1,0 +1,15 @@
+C:\Users\19513\Revature\Team1\MealClient.API\bin\Debug\net7.0\MealClient.app.exe
+C:\Users\19513\Revature\Team1\MealClient.API\bin\Debug\net7.0\MealClient.app.deps.json
+C:\Users\19513\Revature\Team1\MealClient.API\bin\Debug\net7.0\MealClient.app.runtimeconfig.json
+C:\Users\19513\Revature\Team1\MealClient.API\bin\Debug\net7.0\MealClient.app.dll
+C:\Users\19513\Revature\Team1\MealClient.API\bin\Debug\net7.0\MealClient.app.pdb
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\MealClient.app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\MealClient.app.AssemblyInfoInputs.cache
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\MealClient.app.AssemblyInfo.cs
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\MealClient.app.csproj.CoreCompileInputs.cache
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\MealClient.app.sourcelink.json
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\MealClient.app.dll
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\refint\MealClient.app.dll
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\MealClient.app.pdb
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\MealClient.app.genruntimeconfig.cache
+C:\Users\19513\Revature\Team1\MealClient.API\obj\Debug\net7.0\ref\MealClient.app.dll

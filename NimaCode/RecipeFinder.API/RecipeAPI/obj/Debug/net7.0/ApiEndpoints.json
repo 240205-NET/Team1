@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "Recipe.API.Controllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RecipeAPI.Model.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Recipe.API.Controllers.UserController",
+    "Method": "AuthUser",
+    "RelativePath": "api/User/signIn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newUser",
+        "Type": "RecipeAPI.Model.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Recipe.API.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User/signUp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newUser",
+        "Type": "RecipeAPI.Model.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

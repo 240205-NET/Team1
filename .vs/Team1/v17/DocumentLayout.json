@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\19513\\Revature\\Team1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C8B9997D-36E7-4348-BF4B-ACB312F78FC8}|RecipeFinder.API\\RecipeFinder.API.csproj|c:\\users\\19513\\revature\\team1\\recipefinder.api\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8B9997D-36E7-4348-BF4B-ACB312F78FC8}|RecipeFinder.API\\RecipeFinder.API.csproj|solutionrelative:recipefinder.api\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B569AC5-896F-4254-9289-7590379D2D50}|RecipeFinder.DTO\\RecipeFinder.DTO.csproj|c:\\users\\19513\\revature\\team1\\recipefinder.dto\\useraccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B569AC5-896F-4254-9289-7590379D2D50}|RecipeFinder.DTO\\RecipeFinder.DTO.csproj|solutionrelative:recipefinder.dto\\useraccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B569AC5-896F-4254-9289-7590379D2D50}|RecipeFinder.DTO\\RecipeFinder.DTO.csproj|c:\\users\\19513\\revature\\team1\\recipefinder.dto\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B569AC5-896F-4254-9289-7590379D2D50}|RecipeFinder.DTO\\RecipeFinder.DTO.csproj|solutionrelative:recipefinder.dto\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B569AC5-896F-4254-9289-7590379D2D50}|RecipeFinder.DTO\\RecipeFinder.DTO.csproj|c:\\users\\19513\\revature\\team1\\recipefinder.dto\\mealplanaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B569AC5-896F-4254-9289-7590379D2D50}|RecipeFinder.DTO\\RecipeFinder.DTO.csproj|solutionrelative:recipefinder.dto\\mealplanaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4068A0ED-5005-4A3A-88E1-ADCDE76C1B17}|RecipeFinder.Logic\\RecipeFinder.Logic.csproj|c:\\users\\19513\\revature\\team1\\recipefinder.logic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4068A0ED-5005-4A3A-88E1-ADCDE76C1B17}|RecipeFinder.Logic\\RecipeFinder.Logic.csproj|solutionrelative:recipefinder.logic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8B9997D-36E7-4348-BF4B-ACB312F78FC8}|RecipeFinder.API\\RecipeFinder.API.csproj|c:\\users\\19513\\revature\\team1\\recipefinder.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8B9997D-36E7-4348-BF4B-ACB312F78FC8}|RecipeFinder.API\\RecipeFinder.API.csproj|solutionrelative:recipefinder.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserAccess.cs",
+              "DocumentMoniker": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.DTO\\UserAccess.cs",
+              "RelativeDocumentMoniker": "RecipeFinder.DTO\\UserAccess.cs",
+              "ToolTip": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.DTO\\UserAccess.cs",
+              "RelativeToolTip": "RecipeFinder.DTO\\UserAccess.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAswBQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T18:34:48.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MealPlanAccess.cs",
+              "DocumentMoniker": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.DTO\\MealPlanAccess.cs",
+              "RelativeDocumentMoniker": "RecipeFinder.DTO\\MealPlanAccess.cs",
+              "ToolTip": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.DTO\\MealPlanAccess.cs",
+              "RelativeToolTip": "RecipeFinder.DTO\\MealPlanAccess.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T18:25:48.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RecipeController.cs",
+              "DocumentMoniker": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.API\\Controllers\\RecipeController.cs",
+              "RelativeDocumentMoniker": "RecipeFinder.API\\Controllers\\RecipeController.cs",
+              "ToolTip": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.API\\Controllers\\RecipeController.cs",
+              "RelativeToolTip": "RecipeFinder.API\\Controllers\\RecipeController.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAmwC8AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T18:23:22.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.Logic\\Program.cs",
+              "RelativeDocumentMoniker": "RecipeFinder.Logic\\Program.cs",
+              "ToolTip": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.Logic\\Program.cs",
+              "RelativeToolTip": "RecipeFinder.Logic\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T18:24:02.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecipeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.DTO\\RecipeRepository.cs",
+              "RelativeDocumentMoniker": "RecipeFinder.DTO\\RecipeRepository.cs",
+              "ToolTip": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.DTO\\RecipeRepository.cs",
+              "RelativeToolTip": "RecipeFinder.DTO\\RecipeRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T18:23:46.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.API\\Program.cs",
+              "RelativeDocumentMoniker": "RecipeFinder.API\\Program.cs",
+              "ToolTip": "C:\\Users\\19513\\Revature\\Team1\\RecipeFinder.API\\Program.cs",
+              "RelativeToolTip": "RecipeFinder.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T18:20:51.945Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
