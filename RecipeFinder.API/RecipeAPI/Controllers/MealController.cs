@@ -21,15 +21,23 @@ namespace RecipeAPI.Controllers
             _repo = repo;
             _logger = logger;
         }
-        /*
+        
         // Methods
         // GET: api/<MealController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<IEnumerable<string>>> GetAllMealsAsync()
         {
-            return new string[] { "value1", "value2" };
+            IEnumerable<Meal> meals;
+            try
+            {
+                meals = await _repo.GetAll();
+            }catch (Exception e) {
+                _logger.LogError(e.Message);
+                return StatusCode(500);
+            }
+            return Ok(meals.ToList());
         }
-
+        /*
         // GET api/<MealController>/5
         [HttpGet("{id}")]
         public string Get(int id)

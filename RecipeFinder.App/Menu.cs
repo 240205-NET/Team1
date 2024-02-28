@@ -53,7 +53,7 @@ namespace RecipeFinder
                 case "5":
                     Console.Clear();
                     Console.WriteLine("======My Recipes========");
-                    MenuOption.ReadFile();
+                    MenuOption.ShowMyRecipes();
                     break;
                 case "0":
                     loop = false;
