@@ -54,7 +54,7 @@ namespace MealClient.App
 
             var httpClient = new HttpClient();
 
-            var response = await httpClient.PostAsync("https://localhost:7297/api/User/signUp", new StringContent(json, Encoding.UTF8, "application/json"));
+            var response = await httpClient.PostAsync("https://recipeapi20240227165441.azurewebsites.net/api/User/signUp", new StringContent(json, Encoding.UTF8, "application/json"));
 
             // Check if the request was successful
             if (response.IsSuccessStatusCode)
@@ -85,7 +85,7 @@ namespace MealClient.App
 
             var httpClient = new HttpClient();
 
-            var response = await httpClient.PostAsync("https://localhost:7297/api/User/signIn", new StringContent(json, Encoding.UTF8, "application/json"));
+            var response = await httpClient.PostAsync("https://recipeapi20240227165441.azurewebsites.net/api/User/signIn", new StringContent(json, Encoding.UTF8, "application/json"));
 
             if (response.IsSuccessStatusCode)
             {
