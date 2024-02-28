@@ -7,10 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 IConfiguration configuration = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json")
+    .AddJsonFile("appsettings.Development.json")
     .Build();
 
-string connectionString = configuration.GetConnectionString("MyDatabase");
+string connectionString = configuration.GetConnectionString("MyDatabaseConnection");
 
 builder.Services.AddControllers();
 
