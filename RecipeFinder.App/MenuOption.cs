@@ -1,4 +1,7 @@
 using System;
+using System.Net.Http.Json;
+using System.Runtime.CompilerServices;
+using System.Text.Json;
 
 namespace RecipeFinder
 {
@@ -17,7 +20,7 @@ namespace RecipeFinder
                 foreach (var meal in mealResponse.meals)
                 {
 
-                    Console.WriteLine(String.Format("|{0,6}|{1,30}|{2,15}|{3,10}|{4,15},{5,15},{6,15}", meal.idMeal, meal.strMeal.Length < 20 ? meal.strMeal : meal.strMeal.Substring(0, 20), meal.strCategory, meal.strArea, meal.strIngredient1, meal.strIngredient2, meal.strIngredient3));
+                    Console.WriteLine(String.Format("|{1,30}|{2,15}|{3,10}|{4,15},{5,15},{6,15}", meal.Name.Length < 20 ? meal.Name : meal.Name.Substring(0, 20), meal.Category, meal.Area, meal.Ingredient1, meal.Ingredient2, meal.Ingredient3));
                     Console.WriteLine("========================================================================================================");
                 }
             }
@@ -39,7 +42,7 @@ namespace RecipeFinder
                 foreach (var meal in mealResponse.meals)
                 {
 
-                    Console.WriteLine(String.Format("|{0,6}|{1,30}|", meal.idMeal, meal.strMeal.Length < 20 ? meal.strMeal : meal.strMeal.Substring(0, 20)));
+                    Console.WriteLine(String.Format("|{1,30}|", meal.Name.Length < 20 ? meal.Name : meal.Name.Substring(0, 20)));
                     Console.WriteLine("===========================================");
                 }
             }
@@ -59,7 +62,7 @@ namespace RecipeFinder
                 foreach (var meal in mealResponse.meals)
                 {
 
-                    Console.WriteLine(String.Format("|{0,6}|{1,30}|", meal.idMeal, meal.strMeal.Length < 20 ? meal.strMeal : meal.strMeal.Substring(0, 20)));
+                    Console.WriteLine(String.Format("|{1,30}|", meal.Name.Length < 20 ? meal.Name : meal.Name.Substring(0, 20)));
                     Console.WriteLine("=============================================");
                 }
             }
@@ -68,11 +71,11 @@ namespace RecipeFinder
                 Console.WriteLine("Empty return");
             }
         }
-
-        public static void AddRecipe()
-        {
-            string path = @".\TextFile.txt";
-
+        static string url = "https://localhost:7297/"; //add api uri
+        public static async void AddRecipe(){
+            string uri = url + "api/Meal/";
+            
+            /*
             string id = "0";
             Console.Write("Recipe Name: ");
             string? recipeName = Console.ReadLine();
@@ -95,8 +98,93 @@ namespace RecipeFinder
             meal.strIngredient1 = ingr1;
             meal.strIngredient2 = ingr2;
             meal.strIngredient3 = ingr3;
+            */
 
-            WriteFile(meal, path);
+            Meal meal = new Meal();
+            Console.Write("Name: ");
+            meal.Name = Console.ReadLine(); 
+            Console.Write("Category: ");
+            meal.Category = Console.ReadLine(); 
+            Console.Write("Area: ");
+            meal.Area = Console.ReadLine(); 
+            Console.Write("Instructions: ");
+            meal.Instructions = Console.ReadLine(); 
+            Console.Write("Meal_thumb: ");
+            meal.Meal_thumb = Console.ReadLine(); 
+            Console.Write("Tags: ");
+            meal.Tags = Console.ReadLine(); 
+            Console.Write("Youtube: ");
+            meal.Youtube = Console.ReadLine(); 
+            Console.Write("Ingredient1: ");
+            meal.Ingredient1 = Console.ReadLine(); 
+            Console.Write("Ingredient2: ");
+            meal.Ingredient2 = Console.ReadLine(); 
+            Console.Write("Ingredient3: ");
+            meal.Ingredient3 = Console.ReadLine(); 
+            Console.Write("Ingredient4: ");
+            meal.Ingredient4 = Console.ReadLine(); 
+            Console.Write("Ingredient5: ");
+            meal.Ingredient5 = Console.ReadLine(); 
+            Console.Write("Ingredient6: ");
+            meal.Ingredient6 = Console.ReadLine(); 
+            Console.Write("Ingredient7: ");
+            meal.Ingredient7 = Console.ReadLine(); 
+            Console.Write("Ingredient8: ");
+            meal.Ingredient8 = Console.ReadLine(); 
+            Console.Write("Ingredient9: ");
+            meal.Ingredient9 = Console.ReadLine(); 
+            Console.Write("Ingredient10: ");
+            meal.Ingredient10 = Console.ReadLine(); 
+            Console.Write("Ingredient11: ");
+            meal.Ingredient11 = Console.ReadLine(); 
+            Console.Write("Ingredient12: ");
+            meal.Ingredient12 = Console.ReadLine(); 
+            Console.Write("Ingredient13: ");
+            meal.Ingredient13 = Console.ReadLine(); 
+            Console.Write("Ingredient14: ");
+            meal.Ingredient14 = Console.ReadLine(); 
+            Console.Write("Ingredient15: ");
+            meal.Ingredient15 = Console.ReadLine(); 
+            Console.Write("Measure1: ");
+            meal.Measure1 = Console.ReadLine(); 
+            Console.Write("Measure2: ");
+            meal.Measure2 = Console.ReadLine(); 
+            Console.Write("Measure3: ");
+            meal.Measure3 = Console.ReadLine(); 
+            Console.Write("Measure4: ");
+            meal.Measure4 = Console.ReadLine(); 
+            Console.Write("Measure5: ");
+            meal.Measure5 = Console.ReadLine(); 
+            Console.Write("Measure6: ");
+            meal.Measure6 = Console.ReadLine(); 
+            Console.Write("Measure7: ");
+            meal.Measure7 = Console.ReadLine(); 
+            Console.Write("Measure8: ");
+            meal.Measure8 = Console.ReadLine(); 
+            Console.Write("Measure9: ");
+            meal.Measure9 = Console.ReadLine(); 
+            Console.Write("Measure10: ");
+            meal.Measure10 = Console.ReadLine(); 
+            Console.Write("Measure11: ");
+            meal.Measure11 = Console.ReadLine(); 
+            Console.Write("Measure12: ");
+            meal.Measure12 = Console.ReadLine(); 
+            Console.Write("Measure13: ");
+            meal.Measure13 = Console.ReadLine(); 
+            Console.Write("Measure14: ");
+            meal.Measure14 = Console.ReadLine();             
+            Console.Write("Measure15: ");
+            meal.Measure15 = Console.ReadLine(); 
+
+            HttpClient client = new HttpClient();
+            try{
+                HttpResponseMessage response = await client.PostAsJsonAsync<Meal>(uri, meal);
+                if(!response.IsSuccessStatusCode){
+                    Console.WriteLine(response.StatusCode + "\n" + response.Content);
+                }
+            }catch (Exception e){
+                Console.WriteLine(e.Message);
+            }
         }
 
         public static void Serialize(Meal meal, string path)
@@ -107,20 +195,16 @@ namespace RecipeFinder
             File.WriteAllLines(path, text1);
         }
 
-        public static void ReadFile()
+        public static async void ShowMyRecipes()
         {
-            string path = @".\TextFile.txt";
-            if (File.Exists(path))
-            {
-                string[] readText = File.ReadAllLines(path);
-                foreach (string s in readText)
-                {
-                    Console.WriteLine(s);
-                }
-            }
-            else
-            {
-                Console.WriteLine("File not found!");
+            string uri = url + "api/Meal/";
+            HttpClient client = new HttpClient();
+            try{
+                List<Meal> meals = await client.GetFromJsonAsync<List<Meal>>(uri) ?? throw new NullReferenceException("No meals found");
+                foreach(var m in meals)
+                    Console.WriteLine(m);
+            }catch (Exception e){
+                Console.WriteLine(e.Message);
             }
         }
 
