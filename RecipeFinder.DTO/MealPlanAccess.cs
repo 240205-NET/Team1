@@ -11,11 +11,11 @@ namespace RecipeFinder.DTO
 
         private string? _connectionString;
 
-        public MealPlanAccess(IConfiguration configuration)
+        public MealPlanAccess(string conString)
         {
             try
             {
-                _connectionString = configuration.GetConnectionString("DefaultConnection");
+                _connectionString = conString;
             }
             catch (Exception ex)
             {
@@ -31,7 +31,7 @@ namespace RecipeFinder.DTO
             using SqlConnection conn = new(_connectionString);
             conn.Open();
 
-            string query = "SELECT * FROM [MealPlan] WHERE UserID = @UserID";
+            string query = "SELECT * FROM [RecipeFinder].[MealPlan] WHERE UserID = @UserID";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@UserID", userID);
             using SqlDataReader reader = cmd.ExecuteReader();
@@ -58,7 +58,7 @@ namespace RecipeFinder.DTO
             using SqlConnection conn = new(_connectionString);
             conn.Open();
 
-            string query = "INSERT INTO [MealPlan] (UserID, MealID, Date) VALUES (@UserID, @MealID, @Date)";
+            string query = "INSERT INTO [RecipeFinder].[MealPlan] (UserID, MealID, Date) VALUES (@UserID, @MealID, @Date)";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@UserID", mealplan.UserID);
             cmd.Parameters.AddWithValue("@MealID", mealplan.MealID);
@@ -73,7 +73,7 @@ namespace RecipeFinder.DTO
             using SqlConnection conn = new(_connectionString);
             conn.Open();
 
-            string query = "DELETE FROM [MealPlan] WHERE UserID = @UserID AND MealID = @MealID AND Date = @Date";
+            string query = "DELETE FROM [RecipeFinder].[MealPlan] WHERE UserID = @UserID AND MealID = @MealID AND Date = @Date";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@UserID", userID);
             cmd.Parameters.AddWithValue("@MealID", mealID);
@@ -88,7 +88,7 @@ namespace RecipeFinder.DTO
             using SqlConnection conn = new(_connectionString);
             conn.Open();
 
-            string query = "UPDATE [MealPlan] SET UserID = @UserID, MealID = @MealID, Date = @Date WHERE UserID = @UserID AND MealID = @MealID AND Date = @Date";
+            string query = "UPDATE [RecipeFinder].[MealPlan] SET UserID = @UserID, MealID = @MealID, Date = @Date WHERE UserID = @UserID AND MealID = @MealID AND Date = @Date";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@UserID", mealplan.UserID);
             cmd.Parameters.AddWithValue("@MealID", mealplan.MealID);

@@ -10,11 +10,6 @@ namespace RecipeFinder.Logic
         {
             Console.WriteLine("Recipe Finder starting...");
 
-            var repo = new Repository();
-            Console.WriteLine(repo.ListAllUsers());
-            repo.AddNewUser();
-            Console.WriteLine("---------------------------------------------------");
-            Console.WriteLine(repo.ListAllUsers());
         }
     }
 }

@@ -8,11 +8,11 @@ namespace RecipeFinder.DTO
     {
         private string? _connectionString;
 
-        public UserAccess(IConfiguration configuration)
+        public UserAccess(string conString)
         {
             try
             {
-                _connectionString = configuration.GetConnectionString("DefaultConnection");
+                _connectionString = conString;
             }
             catch (Exception ex)
             {
@@ -22,24 +22,24 @@ namespace RecipeFinder.DTO
             }
         }
 
-        public User Login(string username, string password)
+        public async Task<User> Login(string username, string password)
         {
             using SqlConnection conn = new(_connectionString);
-            conn.Open();
+            await conn.OpenAsync();
 
-            string query = "SELECT * FROM [User] WHERE Username = @Username AND Password = @Password";
+            string query = "SELECT * FROM [RecipeFinder].[User] WHERE Username = @Username AND Password = @Password";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@Username", username);
             cmd.Parameters.AddWithValue("@Password", password);
-            using SqlDataReader reader = cmd.ExecuteReader();
+            using SqlDataReader reader = await cmd.ExecuteReaderAsync();
 
-            conn.Close();
+            await conn.CloseAsync();
 
             var user = new User();
 
             if (reader.HasRows)
             {
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     user.Id = reader.GetInt32(0);
                     user.Username = reader.GetString(1);
@@ -53,39 +53,38 @@ namespace RecipeFinder.DTO
             return user;
         }
 
-        public bool Register(User user)
+        public async Task Register(User user)
         {
             try
             {
                 using SqlConnection conn = new(_connectionString);
-                conn.Open();
+                await conn.OpenAsync();
 
-                string query = "INSERT INTO [User] (Username, Password, First_name, Last_name, Email) VALUES (@Username, @Password, @First_name, @Last_name, @Email)";
+                string query = "INSERT INTO [RecipeFinder].[User] (Username, Password, First_name, Last_name, Email) VALUES (@Username, @Password, @First_name, @Last_name, @Email)";
                 using SqlCommand cmd = new(query, conn);
                 cmd.Parameters.AddWithValue("@Username", user.Username);
                 cmd.Parameters.AddWithValue("@Password", user.Password);
                 cmd.Parameters.AddWithValue("@First_name", user.FirstName);
                 cmd.Parameters.AddWithValue("@Last_name", user.LastName);
                 cmd.Parameters.AddWithValue("@Email", user.Email);
-                cmd.ExecuteNonQuery();
+                await cmd.ExecuteNonQueryAsync();
 
-                conn.Close();
-                return true;
+                await conn.CloseAsync();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return false;
+                Environment.Exit(1);
             }
 
         }
 
-        public bool UpdateUser(int id, string username, string password, string firstName, string lastName, string email)
+        public async Task UpdateUser(int id, string username, string password, string firstName, string lastName, string email)
         {
             using SqlConnection conn = new(_connectionString);
-            conn.Open();
+            await conn.OpenAsync();
 
-            string query = "UPDATE [User] SET Username = @Username, Password = @Password, First_name = @First_name, Last_name = @Last_name, Email = @Email WHERE Id = @Id";
+            string query = "UPDATE [RecipeFinder].[User] SET Username = @Username, Password = @Password, First_name = @First_name, Last_name = @Last_name, Email = @Email WHERE Id = @Id";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@Id", id);
             cmd.Parameters.AddWithValue("@Username", username);
@@ -93,45 +92,49 @@ namespace RecipeFinder.DTO
             cmd.Parameters.AddWithValue("@First_name", firstName);
             cmd.Parameters.AddWithValue("@Last_name", lastName);
             cmd.Parameters.AddWithValue("@Email", email);
-            cmd.ExecuteNonQuery();
+            await cmd.ExecuteNonQueryAsync();
 
-            conn.Close();
-
-            return true;
+            await conn.CloseAsync();
         }
 
-        public bool DeleteUser(int id)
+        public async Task DeleteUser(int id)
         {
-            using SqlConnection conn = new(_connectionString);
-            conn.Open();
+            try
+            {
+                using SqlConnection conn = new(_connectionString);
+                await conn.OpenAsync();
 
-            string query = "DELETE FROM [User] WHERE Id = @Id";
-            using SqlCommand cmd = new(query, conn);
-            cmd.Parameters.AddWithValue("@Id", id);
-            cmd.ExecuteNonQuery();
+                string query = "DELETE FROM [RecipeFinder].[User] WHERE Id = @Id";
+                using SqlCommand cmd = new(query, conn);
+                cmd.Parameters.AddWithValue("@Id", id);
+                await cmd.ExecuteNonQueryAsync();
 
-            conn.Close();
-
-            return true;
+                await conn.CloseAsync();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Environment.Exit(1);
+            }
         }
 
-        public User GetUser(int id)
+        public async Task<User> GetUser(int id)
         {
             using SqlConnection conn = new(_connectionString);
-            conn.Open();
+            await conn.OpenAsync();
 
-            string query = "SELECT * FROM [User] WHERE Id = @Id";
+            string query = "SELECT * FROM [RecipeFinder].[User] WHERE Id = @Id";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@Id", id);
-            using SqlDataReader reader = cmd.ExecuteReader();
+            using SqlDataReader reader = await cmd.ExecuteReaderAsync();
 
-            conn.Close();
+            
 
             var user = new User();
 
             if (reader.HasRows)
             {
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     user.Id = reader.GetInt32(0);
                     user.Username = reader.GetString(1);
@@ -142,25 +145,26 @@ namespace RecipeFinder.DTO
                 }
             }
 
+            await conn.CloseAsync();
             return user;
         }
 
-        public List<User> GetAllUsers()
+        public async Task<IEnumerable<User>> GetAllUsers()
         {
             using SqlConnection conn = new(_connectionString);
-            conn.Open();
+            await conn.OpenAsync();
 
-            string query = "SELECT * FROM [User]";
+            string query = "SELECT * FROM [RecipeFinder].[User]";
             using SqlCommand cmd = new(query, conn);
             using SqlDataReader reader = cmd.ExecuteReader();
 
-            conn.Close();
+            
 
             var users = new List<User>();
 
             if (reader.HasRows)
             {
-                while (reader.Read())
+                while (await reader.ReadAsync())
                 {
                     var user = new User();
                     user.Id = reader.GetInt32(0);
@@ -173,6 +177,7 @@ namespace RecipeFinder.DTO
                 }
             }
 
+            await conn.CloseAsync();
             return users;
         }
 

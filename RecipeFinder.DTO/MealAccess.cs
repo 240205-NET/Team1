@@ -10,11 +10,11 @@ namespace RecipeFinder.DTO
 
         private string? _connectionString;
 
-        public MealAccess(IConfiguration configuration)
+        public MealAccess(string conString)
         {
             try
             {
-                _connectionString = configuration.GetConnectionString("DefaultConnection");
+                _connectionString = conString;
             }
             catch (Exception ex)
             {
@@ -29,7 +29,7 @@ namespace RecipeFinder.DTO
             using SqlConnection conn = new(_connectionString);
             await conn.OpenAsync();
 
-            string query = "SELECT * FROM [Meal]";
+            string query = "SELECT * FROM [RecipeFinder].[Meal]";
             using SqlCommand cmd = new(query, conn);
             using SqlDataReader reader = await cmd.ExecuteReaderAsync();
 
@@ -92,7 +92,7 @@ namespace RecipeFinder.DTO
             using SqlConnection conn = new(_connectionString);
             conn.Open();
 
-            string query = "SELECT * FROM [Meal] WHERE Id = @Id";
+            string query = "SELECT * FROM [RecipeFinder].[Meal] WHERE Id = @Id";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@Id", id);
             using SqlDataReader reader = cmd.ExecuteReader();
@@ -157,7 +157,7 @@ namespace RecipeFinder.DTO
             conn.Open();
 
             
-            string query = "INSERT INTO [Meal] (Name, Category, Area, Instructions, MealThumb, Tags, Youtube, Ingredient1, Ingredient2, Ingredient3, Ingredient4, Ingredient5, Ingredient6, Ingredient7, Ingredient8, Ingredient9, Ingredient10, Ingredient11, Ingredient12, Ingredient13, Ingredient14, Ingredient15, Measure1, Measure2, Measure3, Measure4, Measure5, Measure6, Measure7, Measure8, Measure9, Measure10, Measure11, Measure12, Measure13, Measure14, Measure15) VALUES (@Name, @Category, @Area, @Instructions, @MealThumb, @Tags, @Youtube, @Ingredient1, @Ingredient2, @Ingredient3, @Ingredient4, @Ingredient5, @Ingredient6, @Ingredient7, @Ingredient8, @Ingredient9, @Ingredient10, @Ingredient11, @Ingredient12, @Ingredient13, @Ingredient14, @Ingredient15, @Measure1, @Measure2, @Measure3, @Measure4, @Measure5, @Measure6, @Measure7, @Measure8, @Measure9, @Measure10, @Measure11, @Measure12, @Measure13, @Measure14, @Measure15)";
+            string query = "INSERT INTO [RecipeFinder].[Meal] (Name, Category, Area, Instructions, MealThumb, Tags, Youtube, Ingredient1, Ingredient2, Ingredient3, Ingredient4, Ingredient5, Ingredient6, Ingredient7, Ingredient8, Ingredient9, Ingredient10, Ingredient11, Ingredient12, Ingredient13, Ingredient14, Ingredient15, Measure1, Measure2, Measure3, Measure4, Measure5, Measure6, Measure7, Measure8, Measure9, Measure10, Measure11, Measure12, Measure13, Measure14, Measure15) VALUES (@Name, @Category, @Area, @Instructions, @MealThumb, @Tags, @Youtube, @Ingredient1, @Ingredient2, @Ingredient3, @Ingredient4, @Ingredient5, @Ingredient6, @Ingredient7, @Ingredient8, @Ingredient9, @Ingredient10, @Ingredient11, @Ingredient12, @Ingredient13, @Ingredient14, @Ingredient15, @Measure1, @Measure2, @Measure3, @Measure4, @Measure5, @Measure6, @Measure7, @Measure8, @Measure9, @Measure10, @Measure11, @Measure12, @Measure13, @Measure14, @Measure15)";
 
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@Name", meal.Name);
@@ -211,7 +211,7 @@ namespace RecipeFinder.DTO
 
             conn.Open();
 
-            string query = "UPDATE [Meal] SET Name = @Name, Category = @Category, Area = @Area, Instructions = @Instructions, MealThumb = @MealThumb, Tags = @Tags, Youtube = @Youtube, Ingredient1 = @Ingredient1, Ingredient2 = @Ingredient2, Ingredient3 = @Ingredient3, Ingredient4 = @Ingredient4, Ingredient5 = @Ingredient5, Ingredient6 = @Ingredient6, Ingredient7 = @Ingredient7, Ingredient8 = @Ingredient8, Ingredient9 = @Ingredient9, Ingredient10 = @Ingredient10, Ingredient11 = @Ingredient11, Ingredient12 = @Ingredient12, Ingredient13 = @Ingredient13, Ingredient14 = @Ingredient14, Ingredient15 = @Ingredient15, Measure1 = @Measure1, Measure2 = @Measure2, Measure3 = @Measure3, Measure4 = @Measure4, Measure5 = @Measure5, Measure6 = @Measure6, Measure7 = @Measure7, Measure8 = @Measure8, Measure9 = @Measure9, Measure10 = @Measure10, Measure11 = @Measure11, Measure12 = @Measure12, Measure13 = @Measure13, Measure14 = @Measure14, Measure15 = @Measure15 WHERE Id = @Id";
+            string query = "UPDATE [RecipeFinder].[Meal] SET Name = @Name, Category = @Category, Area = @Area, Instructions = @Instructions, MealThumb = @MealThumb, Tags = @Tags, Youtube = @Youtube, Ingredient1 = @Ingredient1, Ingredient2 = @Ingredient2, Ingredient3 = @Ingredient3, Ingredient4 = @Ingredient4, Ingredient5 = @Ingredient5, Ingredient6 = @Ingredient6, Ingredient7 = @Ingredient7, Ingredient8 = @Ingredient8, Ingredient9 = @Ingredient9, Ingredient10 = @Ingredient10, Ingredient11 = @Ingredient11, Ingredient12 = @Ingredient12, Ingredient13 = @Ingredient13, Ingredient14 = @Ingredient14, Ingredient15 = @Ingredient15, Measure1 = @Measure1, Measure2 = @Measure2, Measure3 = @Measure3, Measure4 = @Measure4, Measure5 = @Measure5, Measure6 = @Measure6, Measure7 = @Measure7, Measure8 = @Measure8, Measure9 = @Measure9, Measure10 = @Measure10, Measure11 = @Measure11, Measure12 = @Measure12, Measure13 = @Measure13, Measure14 = @Measure14, Measure15 = @Measure15 WHERE Id = @Id";
 
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@Id", meal.Id);
@@ -266,7 +266,7 @@ namespace RecipeFinder.DTO
             using SqlConnection conn = new(_connectionString);
             conn.Open();
 
-            string query = "DELETE FROM [Meal] WHERE Id = @Id";
+            string query = "DELETE FROM [RecipeFinder].[Meal] WHERE Id = @Id";
             using SqlCommand cmd = new(query, conn);
             cmd.Parameters.AddWithValue("@Id", id);
             cmd.ExecuteNonQuery();
