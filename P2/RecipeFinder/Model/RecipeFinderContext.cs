@@ -27,7 +27,7 @@ public partial class RecipeFinderContext : DbContext
     {
         IConfigurationRoot configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json")
+            .AddJsonFile("./appsettings.json")
             .Build();
         optionsBuilder.UseSqlServer(configuration.GetConnectionString("DataBaseLogingString"));
     }
